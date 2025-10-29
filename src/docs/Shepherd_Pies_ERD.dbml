@@ -33,7 +33,7 @@ Table Employees_Orders {
 Table Pizzas {
   id int [pk, increment]
   order_id int [ref: > Orders.id]
-  size varchar(20)
+  size_id int [ref: > PizzaSizes.id]
   cheese_type varchar(50)
   sauce_type varchar(50)
   price decimal(10, 2)
@@ -47,4 +47,11 @@ Table Toppings {
 Table PizzaToppings {
   pizza_id int [ref: > Pizzas.id]
   topping_id int [ref: > Toppings.id]
+}
+
+Table PizzaSizes {
+  id int [pk, increment]
+  name varchar(20)
+  diameter_inch int
+  base_cost decimal(10, 2)
 }
