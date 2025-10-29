@@ -1,0 +1,50 @@
+Table Employees {
+  id int [pk, increment]
+  first_name varchar(50)
+  last_name varchar(50)
+}
+
+Table Customers {
+  id int [pk, increment]
+  first_name varchar(50)
+  last_name varchar(50)
+  phone varchar(15)
+}
+
+Table Orders {
+  id int [pk, increment]
+  order_timestamp timestamp
+  order_type enum('dine-in', 'delivery')
+  table_number int
+  delivery_address varchar(255)
+  tip_amount decimal(10, 2)
+  total_amount decimal(10, 2)
+  status enum('in-progress', 'ready', 'delivered')
+  customer_id int [ref: > Customers.id]
+}
+
+Table Employees_Orders {
+  id int [pk, increment]
+  employee_id int [ref: > Employees.id]
+  order_id int [ref: > Orders.id]
+  role enum('taker', 'deliverer')
+}
+
+Table Pizzas {
+  id int [pk, increment]
+  order_id int [ref: > Orders.id]
+  size varchar(20)
+  cheese_type varchar(50)
+  sauce_type varchar(50)
+  price decimal(10, 2)
+}
+
+Table Toppings {
+  id int [pk, increment]
+  name varchar(50)
+}
+
+Table PizzaToppings {
+  pizza_id int [ref: > Pizzas.id]
+  topping_id int [ref: > Toppings.id]
+}
