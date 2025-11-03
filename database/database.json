@@ -1,0 +1,95 @@
+{
+  "employees": [
+    { "id": 1, "first_name": "Joe", "last_name": "Giuseppe" },
+    { "id": 2, "first_name": "Maria", "last_name": "Rossi" },
+    { "id": 3, "first_name": "Luca", "last_name": "Bianchi" }
+  ],
+  "customers": [
+    { "id": 1, "first_name": "Anna", "last_name": "Smith", "phone": "555-1234" },
+    { "id": 2, "first_name": "Mark", "last_name": "Johnson", "phone": "555-9876" }
+  ],
+  "toppings": [
+    { "id": 1, "name": "Sausage", "price": 1.00 },
+    { "id": 2, "name": "Pepperoni", "price": 1.00 },
+    { "id": 3, "name": "Mushroom", "price": 0.75 },
+    { "id": 4, "name": "Onion", "price": 0.50 },
+    { "id": 5, "name": "Green pepper", "price": 0.50 },
+    { "id": 6, "name": "Black olive", "price": 0.75 },
+    { "id": 7, "name": "Basil", "price": 0.50 },
+    { "id": 8, "name": "Extra cheese", "price": 1.00 }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "order_timestamp": "2025-10-28T12:45:00",
+      "order_type": "dine-in",
+      "table_number": 5,
+      "delivery_address": null,
+      "tip_amount": 3.00,
+      "total_amount": 28.75,
+      "status": "delivered",
+      "customer_id": 1
+    },
+    {
+      "id": 2,
+      "order_timestamp": "2025-10-28T18:15:00",
+      "order_type": "delivery",
+      "table_number": null,
+      "delivery_address": "123 Elm Street",
+      "tip_amount": 4.50,
+      "total_amount": 42.00,
+      "status": "delivered",
+      "customer_id": 2
+    }
+  ],
+  "employees_orders": [
+    { "employee_id": 2, "order_id": 1, "role": "taker" },
+    { "employee_id": 3, "order_id": 2, "role": "taker" },
+    { "employee_id": 1, "order_id": 2, "role": "deliverer" }
+  ],
+  "pizzas": [
+    {
+      "id": 1,
+      "order_id": 1,
+      "size": "Medium",
+      "cheese_type": "Mozzarella",
+      "sauce_type": "Marinara",
+      "price": 12.50
+    },
+    {
+      "id": 2,
+      "order_id": 1,
+      "size": "Small",
+      "cheese_type": "Ricotta",
+      "sauce_type": "Garlic White",
+      "price": 10.00
+    },
+    {
+      "id": 3,
+      "order_id": 2,
+      "size": "Large",
+      "cheese_type": "Four Cheese",
+      "sauce_type": "Arrabbiata",
+      "price": 15.00
+    },
+    {
+      "id": 4,
+      "order_id": 2,
+      "size": "Medium",
+      "cheese_type": "Buffalo Mozzarella",
+      "sauce_type": "Diavolo",
+      "price": 12.50
+    }
+  ],
+  "pizza_toppings": [
+    { "pizza_id": 1, "topping_id": 2 }, 
+    { "pizza_id": 1, "topping_id": 3 },
+    { "pizza_id": 1, "topping_id": 8 },
+    { "pizza_id": 2, "topping_id": 5 },
+    { "pizza_id": 3, "topping_id": 1 },
+    { "pizza_id": 3, "topping_id": 2 },
+    { "pizza_id": 3, "topping_id": 6 },
+    { "pizza_id": 4, "topping_id": 4 },
+    { "pizza_id": 4, "topping_id": 7 }
+  ]
+}
