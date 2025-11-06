@@ -5,18 +5,28 @@
     { "id": 3, "first_name": "Luca", "last_name": "Bianchi" }
   ],
   "customers": [
-    { "id": 1, "first_name": "Anna", "last_name": "Smith", "phone": "555-1234" },
-    { "id": 2, "first_name": "Mark", "last_name": "Johnson", "phone": "555-9876" }
+    {
+      "id": 1,
+      "first_name": "Anna",
+      "last_name": "Smith",
+      "phone": "555-1234"
+    },
+    {
+      "id": 2,
+      "first_name": "Mark",
+      "last_name": "Johnson",
+      "phone": "555-9876"
+    }
   ],
   "toppings": [
-    { "id": 1, "name": "Sausage", "price": 1.00 },
-    { "id": 2, "name": "Pepperoni", "price": 1.00 },
+    { "id": 1, "name": "Sausage", "price": 1.0 },
+    { "id": 2, "name": "Pepperoni", "price": 1.0 },
     { "id": 3, "name": "Mushroom", "price": 0.75 },
-    { "id": 4, "name": "Onion", "price": 0.50 },
-    { "id": 5, "name": "Green pepper", "price": 0.50 },
+    { "id": 4, "name": "Onion", "price": 0.5 },
+    { "id": 5, "name": "Green pepper", "price": 0.5 },
     { "id": 6, "name": "Black olive", "price": 0.75 },
-    { "id": 7, "name": "Basil", "price": 0.50 },
-    { "id": 8, "name": "Extra cheese", "price": 1.00 }
+    { "id": 7, "name": "Basil", "price": 0.5 },
+    { "id": 8, "name": "Extra cheese", "price": 1.0 }
   ],
   "sauces": [
     { "id": 1, "name": "Marinara" },
@@ -45,7 +55,7 @@
       "order_type": "dine-in",
       "table_number": 5,
       "delivery_address": null,
-      "tip_amount": 3.00,
+      "tip_amount": 3.0,
       "total_amount": 28.75,
       "status": "delivered",
       "customer_id": 1
@@ -56,8 +66,8 @@
       "order_type": "delivery",
       "table_number": null,
       "delivery_address": "123 Elm Street",
-      "tip_amount": 4.50,
-      "total_amount": 35.75,  // CORRECTED AMOUNT
+      "tip_amount": 4.5,
+      "total_amount": 35.75,
       "status": "delivered",
       "customer_id": 2
     }
@@ -71,38 +81,38 @@
     {
       "id": 1,
       "order_id": 1,
-      "size_id": 2,      // Medium
-      "cheese_id": 1,    // Mozzarella
-      "sauce_id": 1,     // Marinara
-      "price": 12.50
+      "size_id": 2,
+      "cheese_id": 1,
+      "sauce_id": 1,
+      "price": 12.5
     },
     {
       "id": 2,
       "order_id": 1,
-      "size_id": 1,      // Small
-      "cheese_id": 4,    // Ricotta
-      "sauce_id": 3,     // Garlic White
-      "price": 10.00
+      "size_id": 1,
+      "cheese_id": 4,
+      "sauce_id": 3,
+      "price": 10.0
     },
     {
       "id": 3,
       "order_id": 2,
-      "size_id": 3,      // Large
-      "cheese_id": 3,    // Four Cheese
-      "sauce_id": 2,     // Arrabbiata
-      "price": 15.00
+      "size_id": 3,
+      "cheese_id": 3,
+      "sauce_id": 2,
+      "price": 15.0
     },
     {
       "id": 4,
       "order_id": 2,
-      "size_id": 2,      // Medium
-      "cheese_id": 2,    // Buffalo Mozzarella
-      "sauce_id": 4,     // Diavolo
-      "price": 12.50
+      "size_id": 2,
+      "cheese_id": 2,
+      "sauce_id": 4,
+      "price": 12.5
     }
   ],
   "pizza_toppings": [
-    { "pizza_id": 1, "topping_id": 2 }, 
+    { "pizza_id": 1, "topping_id": 2 },
     { "pizza_id": 1, "topping_id": 3 },
     { "pizza_id": 1, "topping_id": 8 },
     { "pizza_id": 2, "topping_id": 5 },
