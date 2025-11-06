@@ -18,6 +18,26 @@
     { "id": 7, "name": "Basil", "price": 0.50 },
     { "id": 8, "name": "Extra cheese", "price": 1.00 }
   ],
+  "sauces": [
+    { "id": 1, "name": "Marinara" },
+    { "id": 2, "name": "Arrabbiata" },
+    { "id": 3, "name": "Garlic White" },
+    { "id": 4, "name": "Diavolo" },
+    { "id": 5, "name": "None" }
+  ],
+  "cheeses": [
+    { "id": 1, "name": "Mozzarella" },
+    { "id": 2, "name": "Buffalo Mozzarella" },
+    { "id": 3, "name": "Four Cheese" },
+    { "id": 4, "name": "Ricotta" },
+    { "id": 5, "name": "Vegan" },
+    { "id": 6, "name": "None" }
+  ],
+  "sizes": [
+    { "id": 1, "name": "Small" },
+    { "id": 2, "name": "Medium" },
+    { "id": 3, "name": "Large" }
+  ],
   "orders": [
     {
       "id": 1,
@@ -37,7 +57,7 @@
       "table_number": null,
       "delivery_address": "123 Elm Street",
       "tip_amount": 4.50,
-      "total_amount": 42.00,
+      "total_amount": 35.75,  // CORRECTED AMOUNT
       "status": "delivered",
       "customer_id": 2
     }
@@ -51,33 +71,33 @@
     {
       "id": 1,
       "order_id": 1,
-      "size": "Medium",
-      "cheese_type": "Mozzarella",
-      "sauce_type": "Marinara",
+      "size_id": 2,      // Medium
+      "cheese_id": 1,    // Mozzarella
+      "sauce_id": 1,     // Marinara
       "price": 12.50
     },
     {
       "id": 2,
       "order_id": 1,
-      "size": "Small",
-      "cheese_type": "Ricotta",
-      "sauce_type": "Garlic White",
+      "size_id": 1,      // Small
+      "cheese_id": 4,    // Ricotta
+      "sauce_id": 3,     // Garlic White
       "price": 10.00
     },
     {
       "id": 3,
       "order_id": 2,
-      "size": "Large",
-      "cheese_type": "Four Cheese",
-      "sauce_type": "Arrabbiata",
+      "size_id": 3,      // Large
+      "cheese_id": 3,    // Four Cheese
+      "sauce_id": 2,     // Arrabbiata
       "price": 15.00
     },
     {
       "id": 4,
       "order_id": 2,
-      "size": "Medium",
-      "cheese_type": "Buffalo Mozzarella",
-      "sauce_type": "Diavolo",
+      "size_id": 2,      // Medium
+      "cheese_id": 2,    // Buffalo Mozzarella
+      "sauce_id": 4,     // Diavolo
       "price": 12.50
     }
   ],
