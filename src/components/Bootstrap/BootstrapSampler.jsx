@@ -1,24 +1,24 @@
 import { Container, Row, Col } from "react-bootstrap";
-import BootstrapNavbarSampler from "./samples/BootstrapNavbarSampler.jsx";
-import BootstrapOffcanvasSidebarSampler from "./samples/BootstrapOffcanvasSidebarSampler.jsx";
-import BootstrapButtonCardSampler from "./samples/BootstrapButtonCardSampler.jsx";
-import BootstrapFormCardSampler from "./samples/BootstrapFormCardSampler.jsx";
-import BootstrapAlertsSampler from "./samples/BootstrapAlertsSampler.jsx";
-import BootstrapModalSampler from "./samples/BootstrapModalSampler.jsx";
-import BootstrapAccordionSampler from "./samples/BootstrapAccordionSampler.jsx";
-import BootstrapBadgesSampler from "./samples/BootstrapBadgesSampler.jsx";
-import BootstrapBreadcrumbsSampler from "./samples/BootstrapBreadcrumbsSampler.jsx";
-import BootstrapSpinnerProgressBarSampler from "./samples/BootstrapSpinnerProgressBarSampler.jsx";
-import BootstrapToastSampler from "./samples/BootstrapToastSampler.jsx";
-import BootstrapPaginationSampler from "./samples/BootstrapPaginationSampler.jsx";
-import BootstrapTabsSampler from "./samples/BootstrapTabsSampler.jsx";
-import BootstrapDropdownSampler from "./samples/BootstrapDropdownSampler.jsx";
-import BootstrapTooltipPopoverSampler from "./samples/BootstrapTooltipPopoverSampler.jsx";
-import BootstrapListGroupSampler from "./samples/BootstrapListGroupSampler.jsx";
-import BootstrapInputGroupsSampler from "./samples/BootstrapInputGroupsSampler.jsx";
-import BootstrapButtonGroupsSampler from "./samples/BootstrapButtonGroupsSampler.jsx";
-import BootstrapFooterSampler from "./samples/BootstrapFooterSampler.jsx";
-import BootstrapUtilityClassesSampler from "./samples/BootstrapUtilityClassesSampler.jsx";
+import BootstrapNavbarSampler from "./samples/NavbarSampler.jsx";
+import BootstrapOffcanvasSidebarSampler from "./samples/OffcanvasSidebarSampler.jsx";
+import BootstrapButtonCardSampler from "./samples/ButtonCardSampler.jsx";
+import BootstrapFormCardSampler from "./samples/FormCardSampler.jsx";
+import BootstrapAlertsSampler from "./samples/AlertsSampler.jsx";
+import BootstrapModalSampler from "./samples/ModalSampler.jsx";
+import BootstrapAccordionSampler from "./samples/AccordionSampler.jsx";
+import BootstrapBadgesSampler from "./samples/BadgesSampler.jsx";
+import BootstrapBreadcrumbsSampler from "./samples/BreadcrumbsSampler.jsx";
+import BootstrapSpinnerProgressBarSampler from "./samples/SpinnerProgressBarSampler.jsx";
+import BootstrapToastSampler from "./samples/ToastSampler.jsx";
+import BootstrapPaginationSampler from "./samples/PaginationSampler.jsx";
+import BootstrapTabsSampler from "./samples/TabsSampler.jsx";
+import BootstrapDropdownSampler from "./samples/DropdownSampler.jsx";
+import BootstrapTooltipPopoverSampler from "./samples/TooltipPopoverSampler.jsx";
+import BootstrapListGroupSampler from "./samples/ListGroupSampler.jsx";
+import BootstrapInputGroupsSampler from "./samples/InputGroupsSampler.jsx";
+import BootstrapButtonGroupsSampler from "./samples/ButtonGroupsSampler.jsx";
+import BootstrapFooterSampler from "./samples/FooterSampler.jsx";
+import BootstrapUtilityClassesSampler from "./samples/UtilityClassesSampler.jsx";
 
 /**
  * BootstrapSampler
