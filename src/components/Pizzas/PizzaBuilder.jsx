@@ -12,7 +12,7 @@ import "./PizzaBuilder.css";
 
 
 
-export const PizzaBuilder = ({ onSave, existingPizza }) => {
+export const PizzaBuilder = ({ onSave }) => {
   
   // track state of options (idk if this is necessary)
   const [options, setOptions] = useState({
@@ -24,7 +24,7 @@ export const PizzaBuilder = ({ onSave, existingPizza }) => {
 
   // Pizza state
   const [pizza, setPizza] = useState(
-    existingPizza || {
+     {
       sizeId: 1,
       cheeseId: 1,
       sauceId: 1,
@@ -59,15 +59,6 @@ export const PizzaBuilder = ({ onSave, existingPizza }) => {
   }, [pizza.sizeId, pizza.toppings, options]);
 
   
-  // Update pizza state when editing existing pizza
-  useEffect(() => {
-    if (existingPizza) {
-      setPizza(existingPizza);
-    }
-  }, [existingPizza]);
-
-  
-
 
 
 
@@ -180,7 +171,7 @@ export const PizzaBuilder = ({ onSave, existingPizza }) => {
         </p>
         <button
           type="button"
-          className="bg-green-600 text-white px-4 py-2 rounded"
+          className="pizza-builder button"
           onClick={handleSave}
         > Add to Order
           {/* TODO: We dont have the ability to edit an existing pizza yet. But once we do, if this is an existing pizza, lets display Save Changes instead [existingPizza ? "Save Changes" : "Add to Order"] */}

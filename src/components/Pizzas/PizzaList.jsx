@@ -2,7 +2,7 @@
 // TODO: ability to edit pizza 
 // TODO: Post/patch data in our api database
 
-export default function PizzaList({ pizzas, onEdit }) {
+export const PizzaList = ({ pizzas, onEdit }) => {
   if (!pizzas || pizzas.length === 0) {
     return <p className="mt-4 text-gray-500">No pizzas in this order yet.</p>;
   }
