@@ -1,0 +1,95 @@
+/* -----------------------------------------------
+   PizzaBuilder.css
+   Handles local styling for the Pizza Builder form.
+   Mostly for spacing, alignment, and visual polish.
+------------------------------------------------ */
+
+.pizza-builder {
+  background-color: #ffffff;
+  border-radius: 1rem; /* rounded-2xl */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem; /* p-6 */
+  max-width: 32rem; /* max-w-lg */
+  margin: 1.5rem auto;
+}
+
+.pizza-builder h2 {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 1rem;
+}
+
+.pizza-builder label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.pizza-builder select {
+  width: 100%;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.95rem;
+}
+
+.pizza-builder select:focus {
+  outline: none;
+  border-color: #2563eb; /* blue-600 */
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+.pizza-builder .toppings {
+  margin-top: 1rem;
+}
+
+.pizza-builder .toppings label {
+  display: block;
+  cursor: pointer;
+  margin: 0.25rem 0;
+}
+
+.pizza-builder .toppings input[type="checkbox"] {
+  accent-color: #16a34a; /* green-600 */
+}
+
+.pizza-builder .total {
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.pizza-builder .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.pizza-builder button {
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #16a34a; /* green-600 */
+}
+
+.pizza-builder button.save {
+  background-color: #16a34a; /* green-600 */
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.pizza-builder button.save:hover {
+  background-color: #15803d; /* hover:green-700 */
+}
+
+.pizza-builder button.cancel {
+  background-color: #e5e7eb; /* gray-200 */
+  color: #374151; /* gray-700 */
+  padding: 0.5rem 1rem;
+}
+
+.pizza-builder button.cancel:hover {
+  background-color: #d1d5db;
+}
