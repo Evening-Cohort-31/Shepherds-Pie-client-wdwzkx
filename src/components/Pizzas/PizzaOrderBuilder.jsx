@@ -51,7 +51,7 @@ export const PizzaOrderBuilder = () => {
 
   
  return (
-    <div className="p-8 max-w-3xl mx-auto bg-gray-50 min-h-screen">
+    <div className="pizza-builder">
       <h1 className="text-3xl font-bold mb-6 text-center">
         🍕 Pizza Order Builder
       </h1>
@@ -61,9 +61,9 @@ export const PizzaOrderBuilder = () => {
         <button
           onClick={() => {
             setShowForm(true);
-            setEditingPizza(null);   // ✅ ensure form starts blank
+            setEditingPizza(null);   // ensure form starts blank
           }}
-          className="add-pizza-btn"
+          className="pizza-builder button"
         >
           Add Pizza
         </button>
