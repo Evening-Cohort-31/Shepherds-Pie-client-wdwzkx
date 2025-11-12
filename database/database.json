@@ -1,21 +1,78 @@
 {
   "employees": [
-    {
-      "id": 1,
-      "firstName": "Joe",
-      "lastName": "Giuseppe"
-    },
-    {
-      "id": 2,
-      "firstName": "Maria",
-      "lastName": "Rossi"
-    },
-    {
-      "id": 3,
-      "firstName": "Luca",
-      "lastName": "Bianchi"
-    }
-  ],
+  {
+    "id": 1,
+    "firstName": "Joe",
+    "lastName": "Giuseppe",
+    "email": "joe.giuseppe@perfectslice.com",
+    "phone": "+1-615-555-1023",
+    "jobTitle": "General Manager",
+    "hireDate": "2018-03-12",
+    "employmentEndDate": null,
+    "employmentType": "active",
+    "isAdmin": true
+  },
+  {
+    "id": 2,
+    "firstName": "Maria",
+    "lastName": "Rossi",
+    "email": "maria.rossi@perfectslice.com",
+    "phone": "+1-615-555-2045",
+    "jobTitle": "Shift Supervisor",
+    "hireDate": "2019-06-08",
+    "employmentEndDate": null,
+    "employmentType": "active",
+    "isAdmin": false
+  },
+  {
+    "id": 3,
+    "firstName": "Luca",
+    "lastName": "Bianchi",
+    "email": "luca.bianchi@perfectslice.com",
+    "phone": "+1-615-555-3078",
+    "jobTitle": "Pizza Chef",
+    "hireDate": "2020-01-22",
+    "employmentEndDate": "2024-11-15",
+    "employmentType": "former",
+    "isAdmin": false
+  },
+  {
+    "id": 4,
+    "firstName": "Gianna",
+    "lastName": "Marino",
+    "email": "gianna.marino@perfectslice.com",
+    "phone": "+1-615-555-4112",
+    "jobTitle": "Front Counter Attendant",
+    "hireDate": "2021-04-10",
+    "employmentEndDate": null,
+    "employmentType": "active",
+    "isAdmin": false
+  },
+  {
+    "id": 5,
+    "firstName": "Antonio",
+    "lastName": "Ricci",
+    "email": "antonio.ricci@perfectslice.com",
+    "phone": "+1-615-555-5234",
+    "jobTitle": "Operations Director",
+    "hireDate": "2016-09-01",
+    "employmentEndDate": null,
+    "employmentType": "active",
+    "isAdmin": true
+  },
+  {
+    "id": 6,
+    "firstName": "Elena",
+    "lastName": "Conti",
+    "email": "elena.conti@perfectslice.com",
+    "phone": "+1-615-555-6789",
+    "jobTitle": "Delivery Driver",
+    "hireDate": "2022-05-18",
+    "employmentEndDate": "2025-02-28",
+    "employmentType": "former",
+    "isAdmin": false
+  }
+],
   "customers": [
     {
       "id": 1,

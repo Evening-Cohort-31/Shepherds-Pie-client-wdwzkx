@@ -65,6 +65,8 @@ export const fetchJson = async (endpoint, options = {}) => {
  * ------------------------------------------------
  */
 
+
+// helper function to POST new JSON data to the API
 export const postJson = async (endpoint, data) => {
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
         method: "POST",                     // Specify HTTP method
@@ -75,6 +77,22 @@ export const postJson = async (endpoint, data) => {
     // Handle response the same way as in fetchJson
     if (!response.ok) {
         throw new Error(`POST failed: ${response.status} ${response.statusText}`);
+    }
+
+    return response.json();
+};
+
+// helper function to PUT (update) JSON data to the API
+export const putJson = async (endpoint, data) => {
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+        method: "PUT",                      // Specify HTTP method
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)          // Convert JS object to JSON string
+    });
+
+    // Handle response the same way as in fetchJson
+    if (!response.ok) {
+        throw new Error(`PUT failed: ${response.status} ${response.statusText}`);
     }
 
     return response.json();
