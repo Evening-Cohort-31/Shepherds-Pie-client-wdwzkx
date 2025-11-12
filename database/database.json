@@ -120,20 +120,30 @@
       "name": "None"
     }
   ],
-  "sizes": [
-    {
-      "id": 1,
-      "name": "Small"
-    },
-    {
-      "id": 2,
-      "name": "Medium"
-    },
-    {
-      "id": 3,
-      "name": "Large"
-    }
-  ],
+  "sizes": [{
+    "id": 1,
+    "name": "Small",
+    "inches": 10,
+    "base_price": 8.99
+  },
+  {
+    "id": 2,
+    "name": "Medium",
+    "inches": 12,
+    "base_price": 10.99
+  },
+  {
+    "id": 3,
+    "name": "Large",
+    "inches": 14,
+    "base_price": 12.99
+  },
+  {
+    "id": 4,
+    "name": "Extra Large",
+    "inches": 16,
+    "base_price": 14.99
+  }],
   "orders": [
     {
       "id": 1,
