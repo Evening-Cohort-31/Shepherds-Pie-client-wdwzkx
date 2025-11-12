@@ -186,6 +186,7 @@ export const PizzaForm = ({ onSave, editingPizza }) => {
           type="button"
           className="pizza-builder button"
           onClick={handleSave}> 
+                  {/* // if we did onClick={onSave(pizza)} instead of define handleSave you’re not passing a function — you’re calling onSave immediately, as soon as the component renders.*/}
           {editingPizza ? "Save Changes" : "Add to Order"} 
         </button>
       </div>

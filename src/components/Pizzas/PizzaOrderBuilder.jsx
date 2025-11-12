@@ -17,10 +17,10 @@ export const PizzaOrderBuilder = () => {
   //What happens when the Add Pizza button is clicked? We create/save the pizza, display it in the PizzaList, and close the form.
   const handleAddPizza = (pizza) => {
     const newPizza = {
-      ...pizza,
-      id: Date.now(), // temporary local ID
-      // TODO: track order id foreign key
-    };
+        ...pizza,
+        id: Date.now(), // temporary ID solution // how might we made a simple unique ID per new pizza?
+        // TODO: track order id foreign key
+        }
     setPizzas((prev) => [...prev, newPizza]);
     setShowForm(false);
   };
@@ -83,7 +83,7 @@ export const PizzaOrderBuilder = () => {
       {/* If adding new pizza → show on page */}
           {showForm && !editingPizza && (
             <PizzaForm
-              onSave={handleAddPizza}
+              onSave={handleAddPizza} 
               editingPizza={null}
             />
           )}
