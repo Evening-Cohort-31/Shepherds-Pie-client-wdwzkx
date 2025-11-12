@@ -5,8 +5,8 @@ import { PizzaOrderBuilder } from "./components/Pizzas/PizzaOrderBuilder.jsx";
 export const App = () => {
   return (
     <>
-      {/* <PizzaOrderBuilder /> */}
-      <BootstrapSampler />
+      <PizzaOrderBuilder />
+      {/* <BootstrapSampler />*/}
     </>
   );
 };

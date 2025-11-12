@@ -12,7 +12,7 @@ import "./PizzaBuilder.css";
 
 
 
-export const PizzaBuilder = ({ onSave }) => {
+export const PizzaForm = ({ onSave, editingPizza }) => {
   
   // track state of options (idk if this is necessary)
   const [options, setOptions] = useState({
@@ -33,7 +33,11 @@ export const PizzaBuilder = ({ onSave }) => {
     }
   );
 
-  // Intialize options
+
+
+
+  
+  // Intialize pizza options
   useEffect(() => {
     getPizzaSauceOptions().then((sauces) => {
     setOptions((prev) => ({ ...prev, sauces }));
@@ -59,17 +63,25 @@ export const PizzaBuilder = ({ onSave }) => {
   }, [pizza.sizeId, pizza.toppings, options]);
 
   
+// Prefill the form (the pizza state) if editing an existing pizza
+  useEffect(() => {
+    if (editingPizza) {
+      setPizza(editingPizza);
+    }
+  }, [editingPizza])
 
 
 
 
-  // Handle dropdown changes
+
+
+
+  // Handle dropdown changes 
   const handleChange = (pizzaField, userSelectedValue) => {
     setPizza((previousState) => ({ ...previousState, [pizzaField]: parseInt(userSelectedValue) }));
   };
 
   //Handle toggle changes: replacing the entire toppings array in one go
- // Only one function needed
   const handleToppingCheckbox = (toppingId, isChecked) => {
     const newSelection = isChecked
       ? [...pizza.toppings, toppingId]
@@ -81,7 +93,7 @@ export const PizzaBuilder = ({ onSave }) => {
   }
 
 
-  // 💾 Save pizza to order
+  // Save pizza to order
   const handleSave = () => onSave(pizza);
 
   
@@ -164,17 +176,17 @@ export const PizzaBuilder = ({ onSave }) => {
         ))}
       </div>
 
-      {/* --- Total & Save --- */}
+      {/* Total */}
       <div className="mt-4 flex justify-between items-center">
         <p className="font-bold text-lg">
           Total: ${pizza.price}
         </p>
+      {/* Add to Order [or] Save Changes */}
         <button
           type="button"
           className="pizza-builder button"
-          onClick={handleSave}
-        > Add to Order
-          {/* TODO: We dont have the ability to edit an existing pizza yet. But once we do, if this is an existing pizza, lets display Save Changes instead [existingPizza ? "Save Changes" : "Add to Order"] */}
+          onClick={handleSave}> 
+          {editingPizza ? "Save Changes" : "Add to Order"} 
         </button>
       </div>
     </div>

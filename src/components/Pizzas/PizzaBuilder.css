@@ -93,3 +93,14 @@
 .pizza-builder button.cancel:hover {
   background-color: #d1d5db;
 }
+
+
+.modal-simple {
+  position: fixed;
+  inset: 0; /* full screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(80, 90, 100, 0.95); /* light gray backdrop */
+  z-index: 40;
+}

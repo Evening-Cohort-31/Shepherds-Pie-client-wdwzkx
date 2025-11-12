@@ -1,6 +1,6 @@
 // This shows all of the pizzas that have been added to the order. 
-// TODO: ability to edit pizza 
 // TODO: Post/patch data in our api database
+// TODO: Ability to delete pizzas
 
 export const PizzaList = ({ pizzas, onEdit }) => {
   if (!pizzas || pizzas.length === 0) {
@@ -25,11 +25,12 @@ export const PizzaList = ({ pizzas, onEdit }) => {
             </div>
 
               <button
+                onClick={() => onEdit(p)}
                 className="bg-yellow-400 hover:bg-yellow-500 text-sm px-3 py-1 rounded"
               >
                 Edit
-              </button>
-               {/* TODO: make this button do something!! It should open the PizzaBuilder with the fields pre-selected, and let me patch the pizza object */}
+              </button >
+              
           </li>
         ))}
       </ul>
