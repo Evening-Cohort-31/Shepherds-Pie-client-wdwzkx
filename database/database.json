@@ -1,78 +1,78 @@
 {
   "employees": [
-  {
-    "id": 1,
-    "firstName": "Joe",
-    "lastName": "Giuseppe",
-    "email": "joe.giuseppe@perfectslice.com",
-    "phone": "+1-615-555-1023",
-    "jobTitle": "General Manager",
-    "hireDate": "2018-03-12",
-    "employmentEndDate": null,
-    "employmentType": "active",
-    "isAdmin": true
-  },
-  {
-    "id": 2,
-    "firstName": "Maria",
-    "lastName": "Rossi",
-    "email": "maria.rossi@perfectslice.com",
-    "phone": "+1-615-555-2045",
-    "jobTitle": "Shift Supervisor",
-    "hireDate": "2019-06-08",
-    "employmentEndDate": null,
-    "employmentType": "active",
-    "isAdmin": false
-  },
-  {
-    "id": 3,
-    "firstName": "Luca",
-    "lastName": "Bianchi",
-    "email": "luca.bianchi@perfectslice.com",
-    "phone": "+1-615-555-3078",
-    "jobTitle": "Pizza Chef",
-    "hireDate": "2020-01-22",
-    "employmentEndDate": "2024-11-15",
-    "employmentType": "former",
-    "isAdmin": false
-  },
-  {
-    "id": 4,
-    "firstName": "Gianna",
-    "lastName": "Marino",
-    "email": "gianna.marino@perfectslice.com",
-    "phone": "+1-615-555-4112",
-    "jobTitle": "Front Counter Attendant",
-    "hireDate": "2021-04-10",
-    "employmentEndDate": null,
-    "employmentType": "active",
-    "isAdmin": false
-  },
-  {
-    "id": 5,
-    "firstName": "Antonio",
-    "lastName": "Ricci",
-    "email": "antonio.ricci@perfectslice.com",
-    "phone": "+1-615-555-5234",
-    "jobTitle": "Operations Director",
-    "hireDate": "2016-09-01",
-    "employmentEndDate": null,
-    "employmentType": "active",
-    "isAdmin": true
-  },
-  {
-    "id": 6,
-    "firstName": "Elena",
-    "lastName": "Conti",
-    "email": "elena.conti@perfectslice.com",
-    "phone": "+1-615-555-6789",
-    "jobTitle": "Delivery Driver",
-    "hireDate": "2022-05-18",
-    "employmentEndDate": "2025-02-28",
-    "employmentType": "former",
-    "isAdmin": false
-  }
-],
+    {
+      "id": 1,
+      "firstName": "Joe",
+      "lastName": "Giuseppe",
+      "email": "joe.giuseppe@perfectslice.com",
+      "phone": "+1-615-555-1023",
+      "jobTitle": "General Manager",
+      "hireDate": "2018-03-12",
+      "employmentEndDate": null,
+      "employmentType": "active",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "firstName": "Maria",
+      "lastName": "Rossi",
+      "email": "maria.rossi@perfectslice.com",
+      "phone": "+1-615-555-2045",
+      "jobTitle": "Shift Supervisor",
+      "hireDate": "2019-06-08",
+      "employmentEndDate": null,
+      "employmentType": "active",
+      "isAdmin": false
+    },
+    {
+      "id": 3,
+      "firstName": "Luca",
+      "lastName": "Bianchi",
+      "email": "luca.bianchi@perfectslice.com",
+      "phone": "+1-615-555-3078",
+      "jobTitle": "Pizza Chef",
+      "hireDate": "2020-01-22",
+      "employmentEndDate": "2024-11-15",
+      "employmentType": "former",
+      "isAdmin": false
+    },
+    {
+      "id": 4,
+      "firstName": "Gianna",
+      "lastName": "Marino",
+      "email": "gianna.marino@perfectslice.com",
+      "phone": "+1-615-555-4112",
+      "jobTitle": "Front Counter Attendant",
+      "hireDate": "2021-04-10",
+      "employmentEndDate": null,
+      "employmentType": "active",
+      "isAdmin": false
+    },
+    {
+      "id": 5,
+      "firstName": "Antonio",
+      "lastName": "Ricci",
+      "email": "antonio.ricci@perfectslice.com",
+      "phone": "+1-615-555-5234",
+      "jobTitle": "Operations Director",
+      "hireDate": "2016-09-01",
+      "employmentEndDate": null,
+      "employmentType": "active",
+      "isAdmin": true
+    },
+    {
+      "id": 6,
+      "firstName": "Elena",
+      "lastName": "Conti",
+      "email": "elena.conti@perfectslice.com",
+      "phone": "+1-615-555-6789",
+      "jobTitle": "Delivery Driver",
+      "hireDate": "2022-05-18",
+      "employmentEndDate": "2025-02-28",
+      "employmentType": "former",
+      "isAdmin": false
+    }
+  ],
   "customers": [
     {
       "id": 1,
@@ -91,12 +91,12 @@
     {
       "id": 1,
       "name": "Sausage",
-      "price": 1.0
+      "price": 1
     },
     {
       "id": 2,
       "name": "Pepperoni",
-      "price": 1.0
+      "price": 1
     },
     {
       "id": 3,
@@ -126,7 +126,7 @@
     {
       "id": 8,
       "name": "Extra cheese",
-      "price": 1.0
+      "price": 1
     }
   ],
   "sauces": [
@@ -198,7 +198,7 @@
       "orderType": "dine-in",
       "tableNumber": 5,
       "deliveryAddress": null,
-      "tipAmount": 3.0,
+      "tipAmount": 3,
       "totalAmount": 28.75,
       "status": "delivered",
       "customerId": 1
@@ -247,7 +247,7 @@
       "sizeId": 1,
       "cheeseId": 4,
       "sauceId": 3,
-      "price": 10.0
+      "price": 10
     },
     {
       "id": 3,
@@ -255,7 +255,7 @@
       "sizeId": 3,
       "cheeseId": 3,
       "sauceId": 2,
-      "price": 15.0
+      "price": 15
     },
     {
       "id": 4,

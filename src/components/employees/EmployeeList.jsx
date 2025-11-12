@@ -1,4 +1,3 @@
-import "./EmployeeList.css";
 import {
   Container,
   Card,
@@ -17,15 +16,22 @@ import { Link } from "react-router-dom";
 
 export const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const fetchEmployees = async () => {
-      const data = await getAllEmployees();
-      setEmployees(data);
+      const employeeData = await getAllEmployees();
+      setEmployees(employeeData);
     };
 
     fetchEmployees();
   }, []);
+
+  // Filter employees based on search term
+  const filteredEmployees = employees.filter((employee) => {
+    const fullName = `${employee.firstName} ${employee.lastName}`.toLowerCase();
+    return fullName.includes(searchTerm.toLowerCase());
+  });
 
   return (
     <Container className="py-4">
@@ -36,15 +42,15 @@ export const EmployeeList = () => {
         type="text"
         placeholder="Search by first or last name..."
         className="mb-4"
+        value={searchTerm}
         onChange={(e) => {
-          // Your search handler function will go here
-          // handleSearch(e.target.value);
+          setSearchTerm(e.target.value);
         }}
       />
 
       {/* Employee Cards */}
       <Row xs={1} md={2} lg={3} className="g-4">
-        {employees
+        {filteredEmployees
           .sort((a, b) => {
             // Active employees come first
             if (a.employmentType === "active" && b.employmentType !== "active")
@@ -56,7 +62,7 @@ export const EmployeeList = () => {
           .map((employee) => (
             <Col key={employee.id}>
               <Card
-                className="h-100"
+                className="h-100 bg-dark text-white shadow-sm"
                 style={{ transition: "transform 0.2s" }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.transform = "translateY(-5px)")
@@ -75,7 +81,7 @@ export const EmployeeList = () => {
                     )}
                   </Card.Title>
 
-                  <Card.Subtitle className="mb-3 text-muted">
+                  <Card.Subtitle className="mb-3 text-warning">
                     {employee.jobTitle}
                   </Card.Subtitle>
 
