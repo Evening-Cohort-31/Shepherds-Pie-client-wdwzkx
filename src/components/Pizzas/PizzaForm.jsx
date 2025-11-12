@@ -109,14 +109,14 @@ export const PizzaForm = ({ onSave, editingPizza }) => {
        <h2>🍕 Build Your Pizza</h2>
 
       {/* --- Base Pizza Form --- */}
-      <div className="space-y-3 mb-4">
+      <div className="pizza-selections-section">
         {/* Size */}
         <div>
-          <label className="block font-medium">Size</label>
+          <label className="pizza-selection-title">Size</label>
           <select
             value={pizza.sizeId}
             onChange={(e) => handleChange("sizeId", e.target.value)}
-            className="border rounded px-2 py-1 w-full"
+            className="dropdown-value"
           >
             {options.sizes.map((s) => (
               <option key={s.id} value={s.id}>
@@ -128,11 +128,11 @@ export const PizzaForm = ({ onSave, editingPizza }) => {
 
         {/* Cheese */}
         <div>
-          <label className="block font-medium">Cheese</label>
+          <label className="pizza-selection-title">Cheese</label>
           <select
             value={pizza.cheeseId}
             onChange={(e) => handleChange("cheeseId", e.target.value)}
-            className="border rounded px-2 py-1 w-full"
+            className="dropdown-value"
           >
             {options.cheeses.map((c) => (
               <option key={c.id} value={c.id}>
@@ -144,11 +144,11 @@ export const PizzaForm = ({ onSave, editingPizza }) => {
 
         {/* Sauce */}
         <div>
-          <label className="block font-medium">Sauce</label>
+          <label className="pizza-selection-title">Sauce</label>
           <select
             value={pizza.sauceId}
             onChange={(e) => handleChange("sauceId", e.target.value)}
-            className="border rounded px-2 py-1 w-full"
+            className="dropdown-value"
           >
             {options.sauces.map((s) => (
               <option key={s.id} value={s.id}>
@@ -160,16 +160,16 @@ export const PizzaForm = ({ onSave, editingPizza }) => {
       </div>
 
       {/* Toppings */}
-      <div className="mb-4">
-        <p className="font-semibold mb-1">Toppings:</p>
+      <div className="toppings-section">
+        <p className="pizza-selection-title">Toppings:</p>
         {options.toppings.map((t) => (
-          <label key={t.id} className="block cursor-pointer">
+          <label key={t.id} className="checkbox-selection">
             <input
               type="checkbox"
               checked={pizza.toppings.includes(t.id)}
               onChange={(e) => handleToppingCheckbox(t.id, e.target.checked)}
             />
-            <span className="ml-2">
+            <span className="checkbox-values">
               {t.name} (+${t.price})
             </span>
           </label>
@@ -177,11 +177,13 @@ export const PizzaForm = ({ onSave, editingPizza }) => {
       </div>
 
       {/* Total */}
-      <div className="mt-4 flex justify-between items-center">
-        <p className="font-bold text-lg">
+      <div className="total-section">
+        <p className="total-display">
           Total: ${pizza.price}
         </p>
+      </div>
       {/* Add to Order [or] Save Changes */}
+      <div>
         <button
           type="button"
           className="pizza-builder button"

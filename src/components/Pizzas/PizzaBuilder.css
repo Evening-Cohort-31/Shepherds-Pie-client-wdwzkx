@@ -1,106 +1,232 @@
-/* -----------------------------------------------
-   PizzaBuilder.css
-   Handles local styling for the Pizza Builder form.
-   Mostly for spacing, alignment, and visual polish.
------------------------------------------------- */
+/* ===========================
+   🍕 PIZZA BUILDER FORM STYLES
+   =========================== */
 
+/* Outer container for the form */
 .pizza-builder {
   background-color: #ffffff;
-  border-radius: 1rem; /* rounded-2xl */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem; /* p-6 */
-  max-width: 32rem; /* max-w-lg */
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
   margin: 1.5rem auto;
+  font-family: system-ui, sans-serif;
+  color: #1f2937;
 }
 
-.pizza-builder h2 {
-  font-size: 1.5rem; /* text-2xl */
-  font-weight: 600; /* font-semibold */
-  margin-bottom: 1rem;
+/* Section containing dropdowns for size/cheese/sauce */
+.pizza-selections-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.pizza-builder label {
+/* Shared label/title styling for dropdowns and topping sections */
+.pizza-selection-title {
   display: block;
-  font-weight: 500;
+  font-weight: 600;
+  color: #111827;
   margin-bottom: 0.25rem;
 }
 
-.pizza-builder select {
+/* Dropdown styling */
+.dropdown-value {
   width: 100%;
-  border: 1px solid #d1d5db; /* gray-300 */
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  color: #111827;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.dropdown-value:hover,
+.dropdown-value:focus {
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  outline: none;
+}
+
+/* ===========================
+   🍄 Toppings Section
+   =========================== */
+
+.toppings-section {
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-selection {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+
+.checkbox-selection input[type="checkbox"] {
+  accent-color: #3b82f6; /* modern browsers */
+}
+
+.checkbox-values {
+  margin-left: 0.5rem;
+  color: #374151;
   font-size: 0.95rem;
 }
 
-.pizza-builder select:focus {
-  outline: none;
-  border-color: #2563eb; /* blue-600 */
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
-}
+/* ===========================
+   💰 Total Section
+   =========================== */
 
-.pizza-builder .toppings {
-  margin-top: 1rem;
-}
-
-.pizza-builder .toppings label {
-  display: block;
-  cursor: pointer;
-  margin: 0.25rem 0;
-}
-
-.pizza-builder .toppings input[type="checkbox"] {
-  accent-color: #16a34a; /* green-600 */
-}
-
-.pizza-builder .total {
-  margin-top: 1rem;
-  font-weight: 700;
-  font-size: 1.125rem;
-}
-
-.pizza-builder .actions {
+.total-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 0.75rem;
 }
 
-.pizza-builder button {
+.total-display {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+/* ===========================
+   🖱️ Save/Add Button
+   =========================== */
+
+.pizza-builder.button {
+  display: inline-block;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-weight: 600;
   border: none;
-  border-radius: 0.375rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.5rem;
   cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+.pizza-builder.button:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+.pizza-builder.button:active {
+  transform: translateY(0);
+}
+
+/* ===========================
+   🧱 Responsive tweaks
+   =========================== */
+
+@media (min-width: 640px) {
+  .pizza-selections-section {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 1rem;
+  }
+
+  .dropdown-value {
+    font-size: 0.95rem;
+  }
+
+}
+
+
+
+/* ===========================
+   🍕 Pizza List Styles
+   =========================== */
+
+.pizza-list-box {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-top: 1.5rem;
+}
+
+.pizza-list.h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.pizza-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each pizza item */
+.pizza-list li {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.pizza-list li:last-child {
+  border-bottom: none;
+}
+
+/* Pizza name (header inside each list item) */
+.pizza-name {
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* Details text (IDs, prices, etc.) */
+.pizza-details {
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin: 0.1rem 0;
+}
+
+/* Edit button */
+.edit-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
   font-weight: 500;
-  background-color: #16a34a; /* green-600 */
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.pizza-builder button.save {
-  background-color: #16a34a; /* green-600 */
-  color: #fff;
-  padding: 0.5rem 1rem;
+.edit-button:hover {
+  background-color: #2563eb;
 }
 
-.pizza-builder button.save:hover {
-  background-color: #15803d; /* hover:green-700 */
+/* Placeholder text for empty state */
+.text-gray-500 {
+  color: #6b7280;
 }
 
-.pizza-builder button.cancel {
-  background-color: #e5e7eb; /* gray-200 */
-  color: #374151; /* gray-700 */
-  padding: 0.5rem 1rem;
+/* Utility margins */
+.mt-4 {
+  margin-top: 1rem;
 }
 
-.pizza-builder button.cancel:hover {
-  background-color: #d1d5db;
-}
 
+
+/* ===========================
+   🪟 Simple Modal (modal-simple)
+   =========================== */
 
 .modal-simple {
   position: fixed;
-  inset: 0; /* full screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* soft overlay */
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(80, 90, 100, 0.95); /* light gray backdrop */
-  z-index: 40;
+  z-index: 999;
 }
