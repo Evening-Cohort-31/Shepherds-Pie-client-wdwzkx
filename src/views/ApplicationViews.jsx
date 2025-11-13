@@ -3,6 +3,7 @@ import { EmployeeList } from "../components/employees/EmployeeList.jsx";
 import { PizzaOrderBuilder } from "../components/Pizzas/PizzaOrderBuilder.jsx";
 import BootstrapSampler from "../components/Bootstrap/BootstrapSampler.jsx";
 import { useCurrentEmployee } from "../context/CurrentEmployeeContext.js";
+import { OrderList } from "../components/orders/OrderList.jsx";
 // import { MonthlySalesReport } from "../components/reports/MonthlySalesReport";
 // use employee email to login joe.giuseppe@perfectslice.com or any from database
 
@@ -18,6 +19,7 @@ export const ApplicationViews = () => {
     <Routes>
       <Route path="/" element={<PizzaOrderBuilder />} />
       <Route path="/bootstrap" element={<BootstrapSampler />} />
+      <Route path="/orderlist" element={<OrderList />} />
 
       {/* Route only accessible by admin employees */}
       <Route
