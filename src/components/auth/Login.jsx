@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Form, Button, Card } from "react-bootstrap";
 import { getEmployeeByEmail } from "../../services/employeeService";
+import { useCurrentEmployee } from "../../context/CurrentEmployeeContext.js";
 
 export const EmployeeLogin = () => {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
+  const { setCurrentEmployee } = useCurrentEmployee();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -19,6 +21,9 @@ export const EmployeeLogin = () => {
             id: employee.id,
           })
         );
+
+        // Update context with full employee object
+        setCurrentEmployee(employee);
 
         navigate("/");
       } else {

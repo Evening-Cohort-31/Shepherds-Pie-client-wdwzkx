@@ -2,10 +2,13 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { EmployeeList } from "../components/employees/EmployeeList.jsx";
 import { PizzaOrderBuilder } from "../components/Pizzas/PizzaOrderBuilder.jsx";
 import BootstrapSampler from "../components/Bootstrap/BootstrapSampler.jsx";
+import { useCurrentEmployee } from "../context/CurrentEmployeeContext.js";
 // import { MonthlySalesReport } from "../components/reports/MonthlySalesReport";
 // use employee email to login joe.giuseppe@perfectslice.com or any from database
 
-export const ApplicationViews = ({ currentEmployee }) => {
+export const ApplicationViews = () => {
+  const { currentEmployee } = useCurrentEmployee();
+
   // Wait for currentEmployee to load before rendering routes
   if (currentEmployee === null) {
     return <div>Loading...</div>;
