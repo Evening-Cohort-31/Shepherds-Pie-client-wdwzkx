@@ -34,7 +34,7 @@ export const EmployeeLogin = () => {
     >
       <Card style={{ width: "400px" }} className="shadow">
         <Card.Body className="p-4">
-          <h1 className="text-center mb-2">🥧 Shepard's Pies</h1>
+          <h1 className="text-center mb-2">🍕 Shepard's Pies 🍕</h1>
           <h5 className="text-center text-muted mb-4">Employee Portal</h5>
 
           <Form onSubmit={handleLogin}>
