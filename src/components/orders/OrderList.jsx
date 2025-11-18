@@ -2,7 +2,7 @@ import "./OrderList.css"
 import { useEffect, useState } from "react"
 import { getOrders } from "../../services/orderService"
 import { Card, Row, Col, Container, Form } from "react-bootstrap"
-import { Pagination} from "../../Pagination"
+import { PaginationControls } from "../../Pagination"
 
 const getTodayString = () => {
   const today = new Date()
@@ -98,7 +98,7 @@ return (
       </Row>
       <Row>
         <Col className="d-flex justify-content-center">
-          <Pagination
+          <PaginationControls
             currentPage={currentPage}
             totalOrders={filteredOrders.length}
             pageSize={PAGE_SIZE}
