@@ -55,7 +55,7 @@ const incrementSauce = (counts, sauce) => {
 
 const incrementToppings = (counts, toppingsArray) => {
   for (const topping of toppingsArray) {
-    counts[toppings] = (counts[toppings] || 0) + 1;
+    counts[topping] = (counts[topping] || 0) + 1;
   }
 };
 
