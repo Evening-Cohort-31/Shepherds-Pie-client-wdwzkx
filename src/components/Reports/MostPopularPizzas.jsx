@@ -1,115 +1,117 @@
 import "./MostPopularPizzas.css";
+import { useState, useEffect } from "react";
+import {
+  getReports,
+  getCheeseReports,
+  getSaucesReports,
+  getToppingsReports,
+  getSizesReports,
+} from "../../services/reportService";
+import { SalesReportsChart } from "./PieChart";
 
-const getTopItems = (counts, limit) => {
-    // Convert the object keys/values into an array of [key, value] pairs
+export const SalesReports = () => {
+  const [reports, setReports] = useState([]);
+  const keysToAnalyze = ["sauceId", "cheeseId", "sizeId", "orderId"];
+
+  const countAllProperties = (ordersArray, propertiesToCount) => {
+    const allCounts = {};
+
+    // Initialize the count object for each property specified in the array
+    propertiesToCount.forEach((prop) => {
+      allCounts[prop] = {};
+    });
+
+    // Iterate over the orders array only ONCE
+    ordersArray.forEach((order) => {
+      // Iterate over the list of properties we want to count
+      propertiesToCount.forEach((propName) => {
+        const propertyValue = order[propName];
+
+        if (propertyValue) {
+          // Access the specific property's count object (e.g., allCounts['sauceId'])
+          const currentCountObject = allCounts[propName];
+
+          // Update the count for that specific value (e.g., '1', '2', '3')
+          currentCountObject[propertyValue] =
+            (currentCountObject[propertyValue] || 0) + 1;
+        }
+      });
+    });
+
+    return allCounts;
+  };
+
+  useEffect(() => {
+    const fetchOrdersAndGenerateReports = async () => {
+      try {
+        const ordersArray = await getReports();
+
+        const generateReports = countAllProperties(ordersArray, keysToAnalyze);
+
+        setReports(generateReports);
+      } catch (error) {
+        console.error("Failed to fetch all orders or generate reports.", error);
+      }
+    };
+
+    fetchOrdersAndGenerateReports();
+  }, []);
+
+  const formatForPieChart = (counts, labelPrefix, nameMap = {}) => {
+    if (!counts) return [];
+
     return Object.entries(counts)
-        // Map the array into an array of objects for easier access
-        .map(([name, count]) => ({ name, count}))
-
-        // Sort the array in descending order
-        .sort((a, b) => b.count - a.count)
-
-        // Return on the first 'limit' number of items
-        .slice(0, limit)
-}
-
-export const processPopularityData = (orders) => {
-  const counts = {
-    sizes: {},
-    cheeseTypes: {},
-    sauceTypes: {},
-    toppings: {},
+      .map(([id, count]) => ({
+        label: nameMap[id] || `${labelPrefix} ${id}`,
+        value: count,
+      }))
+      .sort((a, b) => b.value - a.value);
   };
 
-  // Loop through the orders and the pizzas only ONCE
-
-  for (const order of orders) {
-    for (const pizza of pizzas) {
-      // Increment all counters simultaneously within a single loop
-      incrementSize(counts.sizes, pizza.size);
-      incrementCheese(counts.cheeseTypes, pizza.cheese);
-      incrementSauce(counts.sauceTypes, pizza.sauce);
-      incrementToppings(counts.toppings, pizza.toppings);
-    }
-  }
-
-  return {
-    mostPopularSize: getTopItems(counts.sizes, 1)[0],
-    mostPopularCheese: getTopItems(counts.cheeseTypes, 1)[0],
-    mostPopularSauce: getTopItems(counts.sauceTypes, 1)[0],
-    topThreeToppings: getTopItems(counts.toppings, 3),
+  const sauceName = {
+    1: "Marinara",
+    2: "Arrabiata",
+    3: "Garlic White",
+    4: "Diavolo",
+    5: "None",
   };
+
+  const cheeseNames = {
+    1: "Mozzerella",
+    2: "Buffalo Mozzerella",
+    3: "Four Cheese",
+    4: "Ricotta",
+    5: "Vegan",
+    6: "None",
+  };
+
+  const saucePieChartData = formatForPieChart(
+    reports.sauceId,
+    "Sauce",
+    sauceName
+  );
+  const cheesePieData = formatForPieChart(
+    reports.cheeseId,
+    "Cheese",
+    cheeseNames
+  );
+
+  return (
+    <div className="sales-reports">
+      <h2>Sauces Popularity</h2>
+      <SalesReportsChart
+        chartData={saucePieChartData}
+        chartId="saucePieChart"
+        titleText="Overall Sauce Choices"
+      />
+
+      <h2>Cheese Popularity</h2>
+      <SalesReportsChart
+        chartData={cheesePieData}
+        chartId="cheesePieChart"
+        titleText="Overall Cheese Choices"
+      />
+    </div>
+  );
 };
 
-const incrementSize = (counts, size) => {
-  counts[size] = (counts[size] || 0) + 1;
-};
-
-const incrementCheese = (counts, cheese) => {
-  counts[cheese] = (counts[cheese] || 0) + 1;
-};
-
-const incrementSauce = (counts, sauce) => {
-  counts[sauce] = (counts[sauce] || 0) + 1;
-};
-
-const incrementToppings = (counts, toppingsArray) => {
-  for (const topping of toppingsArray) {
-    counts[topping] = (counts[topping] || 0) + 1;
-  }
-};
-
-export const byPopularChoice = async () => {
-  // Fetch the data based on the date range
-  const orders = await fetchOrders(dateRange);
-
-  // Process the data
-  const popularData = processPopularityData(orders);
-
-  // Update the database.cache
-
-  await updataPopularityInDatabase(popularData);
-
-  return popularData;
-};
-
-
-
-
-// Finish creating the function to generate the charts with the data
-// Next session load the view and check the function of the pie chart
-
-
-
-
-
-/* Most popular size:
-    For... of loop and increment the pizza sizes from each order
-    The incremented data will be added to the data base
-*/
-
-/* Most popular cheese type
-    For... of loop and increment the cheese types from each pizza from each order
-    The incremented data will be added to the data base
-    
-*/
-
-/* Most popular sauce type
-    For... of loop and increment the sauce type from each pizza from each order
-    The incremented data will be added to the data base
-
-*/
-
-/* Most popular toppings ( TOP 3 )
-    For... of loop and increment the toppings from each pizza from each order
-    The incremented data will be added to the data base
-
-*/
-
-/*
- There will be a button to initiate/reload the data for the popular selections.
-*/
-
-/*
-Data Range Filter (Paginations) and a dropdown menu where the user can selection the date from a calendar.
-*/
