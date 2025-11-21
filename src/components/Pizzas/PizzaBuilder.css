@@ -1,0 +1,232 @@
+/* ===========================
+   🍕 PIZZA BUILDER FORM STYLES
+   =========================== */
+
+/* Outer container for the form */
+.pizza-builder {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 1.5rem auto;
+  font-family: system-ui, sans-serif;
+  color: #1f2937;
+}
+
+/* Section containing dropdowns for size/cheese/sauce */
+.pizza-selections-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Shared label/title styling for dropdowns and topping sections */
+.pizza-selection-title {
+  display: block;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+/* Dropdown styling */
+.dropdown-value {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  color: #111827;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.dropdown-value:hover,
+.dropdown-value:focus {
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  outline: none;
+}
+
+/* ===========================
+   🍄 Toppings Section
+   =========================== */
+
+.toppings-section {
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-selection {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+
+.checkbox-selection input[type="checkbox"] {
+  accent-color: #3b82f6; /* modern browsers */
+}
+
+.checkbox-values {
+  margin-left: 0.5rem;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   💰 Total Section
+   =========================== */
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 0.75rem;
+}
+
+.total-display {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+/* ===========================
+   🖱️ Save/Add Button
+   =========================== */
+
+.pizza-builder.button {
+  display: inline-block;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+.pizza-builder.button:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+.pizza-builder.button:active {
+  transform: translateY(0);
+}
+
+/* ===========================
+   🧱 Responsive tweaks
+   =========================== */
+
+@media (min-width: 640px) {
+  .pizza-selections-section {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 1rem;
+  }
+
+  .dropdown-value {
+    font-size: 0.95rem;
+  }
+
+}
+
+
+
+/* ===========================
+   🍕 Pizza List Styles
+   =========================== */
+
+.pizza-list-box {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-top: 1.5rem;
+}
+
+.pizza-list.h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.pizza-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each pizza item */
+.pizza-list li {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.pizza-list li:last-child {
+  border-bottom: none;
+}
+
+/* Pizza name (header inside each list item) */
+.pizza-name {
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* Details text (IDs, prices, etc.) */
+.pizza-details {
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin: 0.1rem 0;
+}
+
+/* Edit button */
+.edit-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.edit-button:hover {
+  background-color: #2563eb;
+}
+
+/* Placeholder text for empty state */
+.text-gray-500 {
+  color: #6b7280;
+}
+
+/* Utility margins */
+.mt-4 {
+  margin-top: 1rem;
+}
+
+
+
+/* ===========================
+   🪟 Simple Modal (modal-simple)
+   =========================== */
+
+.modal-simple {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* soft overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}

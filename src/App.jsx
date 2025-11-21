@@ -1,13 +1,25 @@
 import "./App.css";
-// 💡 For setup instructions, see:
-// docs/react-bootstrap-setup.md → section "4. Using Components"
-import Button from "react-bootstrap/Button";
+import { Routes, Route } from "react-router-dom";
+import { EmployeeLogin } from "./components/auth/Login.jsx";
+import { ApplicationViews } from "./views/ApplicationViews.jsx";
+import { Authorized } from "./views/Authorized.jsx";
+import { CurrentEmployeeProvider } from "./context/CurrentEmployeeProvider.jsx";
 
 export const App = () => {
   return (
-    <div className="App">
-      <h1>Shepherd’s Pies</h1>
-      <Button variant="primary">Test Button</Button>
-    </div>
+    <CurrentEmployeeProvider>
+      <Routes>
+        <Route path="/login" element={<EmployeeLogin />} />
+        <Route
+          path="*"
+          element={
+            <Authorized>
+              {/* Pass the currentEmployee as a prop to ApplicationViews */}
+              <ApplicationViews />
+            </Authorized>
+          }
+        />
+      </Routes>
+    </CurrentEmployeeProvider>
   );
 };
