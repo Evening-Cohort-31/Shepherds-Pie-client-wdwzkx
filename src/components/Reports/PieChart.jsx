@@ -48,11 +48,11 @@ export const SalesReportsChart = ({ chartData, chartId, titleText }) => {
             data: dataCounts,
             backgroundColor: [
               // Use a more extensive color palette
-              "rgba(255, 99, 132, 0.8)",
-              "rgba(54, 162, 235, 0.8)",
-              "rgba(255, 206, 86, 0.8)",
-              "rgba(75, 192, 192, 0.8)",
-              "rgba(153, 102, 255, 0.8)",
+              "#8c1c13)",
+              "#bf4342",
+              "#e7d7c1",
+              "#a78a7f",
+              "#735751",
               "rgba(255, 159, 64, 0.8)",
             ],
             borderColor: "#fff",

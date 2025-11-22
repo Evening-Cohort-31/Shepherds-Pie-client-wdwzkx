@@ -5,22 +5,7 @@ export const getReports = async () => {
   return response.json();
 };
 
-export const getCheeseReports = async () => {
-  const response = await fetch(`${API_BASE_URL}/cheeses`);
-  return response.json();
-};
-
 export const getToppingsReports = async () => {
-  const response = await fetch(`${API_BASE_URL}/toppings`);
+  const response = await fetch(`${API_BASE_URL}/pizzaToppings`);
   return response.json();
 };
-
-export const getSaucesReports = async () => {
-  const response = await fetch(`${API_BASE_URL}/sauces`);
-  return response.json();
-};
-
-export const getSizesReports = async () => {
-    const response = await fetch(`${API_BASE_URL}/sizes`)
-    return response.json()
-}

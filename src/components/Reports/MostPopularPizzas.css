@@ -1,0 +1,28 @@
+.allCharts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2rem;
+}
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 1px solid var(--outline);
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.chart-title {
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+
+.toppings-table {
+  display: flex;
+  text-decoration: none;
+  padding-top: 5px;
+  justify-content: center;
+}
