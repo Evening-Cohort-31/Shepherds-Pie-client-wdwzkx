@@ -2,6 +2,9 @@ import "./MostPopularPizzas.css";
 import { useState, useEffect } from "react";
 import { getReports, getToppingsReports } from "../../services/reportService";
 import { SalesReportsChart } from "./PieChart";
+import { NavButtons } from "../NavBar/NavBar";
+import { Link } from "react-router-dom";
+import { PopularItemsDetails } from "./PopularItem";
 
 const getTopItems = (itemsArray, propertyName, limit) => {
   const counts = itemsArray.reduce((acc, item) => {
@@ -106,7 +109,7 @@ export const SalesReports = () => {
         const ordersArray = await getReports();
         const toppingsArray = await getToppingsReports();
         const generateReports = countAllProperties(ordersArray, keysToAnalyze);
-        const topThreeToppings = getTopItems(toppingsArray, "toppingId", 3);
+        const topThreeToppings = getTopItems(toppingsArray, "toppingId", toppingsArray.length);
 
         setReports({
           ...generateReports,
@@ -118,10 +121,9 @@ export const SalesReports = () => {
     };
 
     fetchOrdersAndGenerateReports();
-
   }, []);
 
-  const saucePieChartData = formatForPieChart(
+  const saucePieData = formatForPieChart(
     reports.sauceId,
     "Sauce",
     sauceName
@@ -143,48 +145,90 @@ export const SalesReports = () => {
     return <div>Loading Sales Reports... </div>;
   }
   return (
-    <div className="allCharts">
-      <div className="chart-container">
-        <h2 className="chart-title">Sauces Popularity</h2>
-        <SalesReportsChart
-          chartData={saucePieChartData}
-          chartId="saucePieChart"
-          titleText="Sauce Choice Percentage"
-          className="pieChart"
-        />
-      </div>
+    <div>
+      {" "}
+      <NavButtons />
+      <div className="allCharts">
+        <div className="chart-container">
+          <h2 className="chart-title">
+            <Link
+              to="/report/breakdown"
+              state={{
+                data: saucePieData,
+                title: "Sauces Popularity Breakdown"
+              }}
+              className="chart-link"
+            >
+              Sauces Popularity
+            </Link>
+          </h2>
+          <SalesReportsChart
+            chartData={saucePieData}
+            chartId="saucePieChart"
+            titleText="Sauce Choice Percentage"
+            className="pieChart"
+          />
+        </div>
 
-      <div className="chart-container">
-        <h2 className="chart-title">Cheese Popularity</h2>
-        <SalesReportsChart
-          chartData={cheesePieData}
-          chartId="cheesePieChart"
-          titleText="Cheese Choice Percentages"
-          className="pieChart"
-        />
-      </div>
+        <div className="chart-container">
+          <h2 className="chart-title"><Link
+              to="/report/breakdown"
+              state={{
+                data: cheesePieData,
+                title: "Cheese Popularity Breakdown"
+              }}
+              className="chart-link"
+            >
+              Cheese Popularity
+            </Link></h2>
+          <SalesReportsChart
+            chartData={cheesePieData}
+            chartId="cheesePieChart"
+            titleText="Cheese Choice Percentages"
+            className="pieChart"
+          />
+        </div>
 
-      <div className="chart-container">
-        <h2 className="chart-title">Size Options</h2>
-        <SalesReportsChart
-          chartData={sizePieData}
-          chartId="sizePieChart"
-          titleText="Size Choice Percentages"
-          className="pieChart"
-        />
-      </div>
+        <div className="chart-container">
+          <h2 className="chart-title"><Link
+              to="/report/breakdown"
+              state={{
+                data: sizePieData,
+                title: "Size Popularity Breakdown"
+              }}
+              className="chart-link"
+            >
+              Size Popularity
+            </Link></h2>
+          <SalesReportsChart
+            chartData={sizePieData}
+            chartId="sizePieChart"
+            titleText="Size Choice Percentages"
+            className="pieChart"
+          />
+        </div>
 
-      <div className="chart-container">
-        <h2 className="chart-title">Most Popular Toppings</h2>
-        <ul className="toppings-list">
-          {topThreeWithNames.map((toppingObject, index) => {
-            return (
-              <li className="toppings-table"key={index}>
-                {toppingObject.name} ({toppingObject.value} orders)
-              </li>
-            );
-          })}
-        </ul>
+        <div className="chart-container">
+          <h2 className="chart-title">Most Popular Toppings</h2>
+          <ul className="toppings-list">
+            {topThreeWithNames.map((toppingObject, index) => {
+              return (
+                <li className="toppings-table" key={index}><Link
+              to="/report/breakdown"
+              state={{
+                data: topThreeWithNames,
+                title: "Toppings Data Breakdown"
+              }}
+              className="chart-link"
+            >
+              {toppingObject.name} 
+            </Link>
+                  <span>({toppingObject.value} orders)</span> 
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );

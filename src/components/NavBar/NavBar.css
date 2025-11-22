@@ -1,0 +1,25 @@
+  .navButtons {
+    display: flex;
+    background-color: #bf4342;
+    margin: 0;
+    padding: 0.5rem;
+  }
+
+  .navButton-item {
+    list-style-type: none;
+    text-align: center;
+  }
+
+  .navButton-link {
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #e7d7c1;
+  }
+
+  .navButton-logout {
+    margin-left: auto;
+  }
+
+  .navButton-link:hover {
+    color: var(--primary);
+  }

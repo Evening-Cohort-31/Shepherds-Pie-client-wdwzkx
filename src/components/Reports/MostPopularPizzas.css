@@ -18,6 +18,7 @@
   text-align: center;
   border-bottom: 1px solid black;
   padding-bottom: 5px;
+  color: #bf4342
 }
 
 .toppings-table {
@@ -25,4 +26,15 @@
   text-decoration: none;
   padding-top: 5px;
   justify-content: center;
+}
+
+.chart-link {
+    text-decoration: none;
+    color: #bf4342;
+}
+
+.breakdown-page {
+    display: block;
+    margin: auto;
+    padding: 2rem;
 }
