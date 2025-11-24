@@ -1,0 +1,19 @@
+.bg-shepherd-dark {
+  background-color: var(--shepherd-dark) !important;
+  color: #fff;
+}
+
+.bg-shepherd-dark-light {
+  background-color: var(--shepherd-dark-light) !important;
+  color: #fff;
+}
+
+.hover-link {
+  cursor: pointer;
+}
+
+.hover-link:hover {
+  color: var(
+    --shepherd-accent
+  ) !important; /* Warning yellow to match your theme */
+}

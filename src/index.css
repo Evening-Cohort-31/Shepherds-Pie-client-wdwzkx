@@ -1,13 +1,54 @@
+/* === Shepherd's Pie Brand Colors === */
+
+:root {
+  /* === Base Brand Colors === */
+  --shepherd-dark: #1e2b27;
+  --shepherd-dark-rgb: 30, 43, 39;
+
+  --shepherd-dark-soft: #2c2f33;
+  --shepherd-dark-soft-rgb: 44, 47, 51;
+
+  --shepherd-dark-light: #273934;
+  --shepherd-dark-light-rgb: 39, 57, 52;
+
+  --shepherd-dark-lighter: #313d3a;
+  --shepherd-dark-lighter-rgb: 49, 61, 58;
+
+  /* === Accent + Utility Colors === */
+  --shepherd-accent: #0f863d; /* your brand green */
+  --shepherd-accent-rgb: 15, 134, 61;
+
+  --shepherd-accent-light: #20a957;
+  --shepherd-accent-light-rgb: 32, 169, 87;
+
+  --shepherd-accent-dark: #0b5f2c;
+  --shepherd-accent-dark-rgb: 11, 95, 44;
+
+  /* === Soft Neutrals === */
+  --shepherd-muted: #8e9e96;
+  --shepherd-muted-rgb: 142, 158, 150;
+
+  --shepherd-border: #3a4a45;
+  --shepherd-border-rgb: 58, 74, 69;
+
+  /* === Whites for dark UI === */
+  --shepherd-white: #f5f5f5;
+  --shepherd-white-rgb: 245, 245, 245;
+
+  --shepherd-white-soft: #dcdcdc;
+  --shepherd-white-soft-rgb: 220, 220, 220;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

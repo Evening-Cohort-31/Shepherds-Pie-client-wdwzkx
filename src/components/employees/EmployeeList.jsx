@@ -12,11 +12,14 @@ import {
   updateEmployeeByEmployeeId,
 } from "../../services/employeeService.js";
 import { useEffect, useState } from "react";
+import { useCurrentEmployee } from "../../context/CurrentEmployeeContext.js";
 import { Link } from "react-router-dom";
+import "./EmployeeList.css";
 
 export const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const { currentEmployee } = useCurrentEmployee();
 
   useEffect(() => {
     const fetchEmployees = async () => {
@@ -62,7 +65,7 @@ export const EmployeeList = () => {
           .map((employee) => (
             <Col key={employee.id}>
               <Card
-                className="h-100 bg-dark text-white shadow-sm"
+                className="h-100 bg-shepherd-dark text-white shadow-sm"
                 style={{ transition: "transform 0.2s" }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.transform = "translateY(-5px)")
@@ -71,8 +74,19 @@ export const EmployeeList = () => {
                   (e.currentTarget.style.transform = "translateY(0)")
                 }
               >
-                <Card.Body className="d-flex flex-column">
-                  <Card.Title>
+                <Card.Body className="d-flex flex-column card-body">
+                  <Card.Title
+                    as={Link}
+                    to={`/employees/${employee.id}`}
+                    className="text-white text-decoration-none mb-2 fs-4 fw-bold d-block hover-link"
+                    style={{
+                      transition: "color 0.2s",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.color = "#ffc107")
+                    }
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "#fff")}
+                  >
                     {employee.firstName} {employee.lastName}
                     {employee.isAdmin && (
                       <Badge bg="warning" text="dark" className="ms-2">
@@ -124,7 +138,13 @@ export const EmployeeList = () => {
                       {employee.isAdmin ? "Revoke Admin" : "Make Admin"}
                     </Button>
 
-                    <Button variant="primary" size="sm" disabled>
+                    <Button
+                      as={Link}
+                      to={`/employees/${employee.id}/edit`}
+                      variant="primary"
+                      size="sm"
+                      disabled={!currentEmployee.isAdmin}
+                    >
                       Edit Profile
                     </Button>
                   </div>
