@@ -177,30 +177,32 @@
       "name": "None"
     }
   ],
-  "sizes": [{
-    "id": 1,
-    "name": "Small",
-    "inches": 10,
-    "base_price": 8.99
-  },
-  {
-    "id": 2,
-    "name": "Medium",
-    "inches": 12,
-    "base_price": 10.99
-  },
-  {
-    "id": 3,
-    "name": "Large",
-    "inches": 14,
-    "base_price": 12.99
-  },
-  {
-    "id": 4,
-    "name": "Extra Large",
-    "inches": 16,
-    "base_price": 14.99
-  }],
+  "sizes": [
+    {
+      "id": 1,
+      "name": "Small",
+      "inches": 10,
+      "base_price": 8.99
+    },
+    {
+      "id": 2,
+      "name": "Medium",
+      "inches": 12,
+      "base_price": 10.99
+    },
+    {
+      "id": 3,
+      "name": "Large",
+      "inches": 14,
+      "base_price": 12.99
+    },
+    {
+      "id": 4,
+      "name": "Extra Large",
+      "inches": 16,
+      "base_price": 14.99
+    }
+  ],
   "orders": [
     {
       "id": 1,
@@ -247,203 +249,203 @@
       "customerId": 2
     },
     {
-  "id": 5,
-  "orderTimestamp": "2025-11-05T19:30:00",
-  "orderType": "dine-in",
-  "tableNumber": 8,
-  "deliveryAddress": null,
-  "tipAmount": 5.25,
-  "totalAmount": 42.50,
-  "status": "delivered",
-  "customerId": 1
-},
-{
-  "id": 6,
-  "orderTimestamp": "2025-11-05T11:20:00",
-  "orderType": "delivery",
-  "tableNumber": null,
-  "deliveryAddress": "456 Oak Avenue",
-  "tipAmount": 6.00,
-  "totalAmount": 48.90,
-  "status": "delivered",
-  "customerId": 2
-},
-{
-  "id": 7,
-  "orderTimestamp": "2025-11-05T13:45:00",
-  "orderType": "dine-in",
-  "tableNumber": 3,
-  "deliveryAddress": null,
-  "tipAmount": 4.00,
-  "totalAmount": 31.25,
-  "status": "delivered",
-  "customerId": 1
-},
-{
-  "id": 8,
-  "orderTimestamp": "2025-11-05T17:10:00",
-  "orderType": "delivery",
-  "tableNumber": null,
-  "deliveryAddress": "789 Maple Drive",
-  "tipAmount": 3.75,
-  "totalAmount": 29.60,
-  "status": "delivered",
-  "customerId": 2
-},
-{
-  "id": 9,
-  "orderTimestamp": "2025-11-05T12:00:00",
-  "orderType": "dine-in",
-  "tableNumber": 12,
-  "deliveryAddress": null,
-  "tipAmount": 7.50,
-  "totalAmount": 55.80,
-  "status": "delivered",
-  "customerId": 1
-},
-{
-  "id": 10,
-  "orderTimestamp": "2025-11-05T14:30:00",
-  "orderType": "delivery",
-  "tableNumber": null,
-  "deliveryAddress": "321 Pine Street",
-  "tipAmount": 5.50,
-  "totalAmount": 44.20,
-  "status": "delivered",
-  "customerId": 1
-},
-{
-  "id": 11,
-  "orderTimestamp": "2025-11-05T19:45:00",
-  "orderType": "dine-in",
-  "tableNumber": 7,
-  "deliveryAddress": null,
-  "tipAmount": 6.25,
-  "totalAmount": 51.75,
-  "status": "delivered",
-  "customerId": 2
-},
-{
-  "id": 12,
-  "orderTimestamp": "2025-11-05T11:15:00",
-  "orderType": "delivery",
-  "tableNumber": null,
-  "deliveryAddress": "654 Birch Lane",
-  "tipAmount": 4.25,
-  "totalAmount": 38.50,
-  "status": "delivered",
-  "customerId": 2
-},
-{
-  "id": 13,
-  "orderTimestamp": "2025-11-05T16:20:00",
-  "orderType": "dine-in",
-  "tableNumber": 10,
-  "deliveryAddress": null,
-  "tipAmount": 3.50,
-  "totalAmount": 27.90,
-  "status": "delivered",
-  "customerId": 1
-},
-{
-  "id": 14,
-  "orderTimestamp": "2025-11-05T20:00:00",
-  "orderType": "delivery",
-  "tableNumber": null,
-  "deliveryAddress": "987 Cedar Court",
-  "tipAmount": 5.00,
-  "totalAmount": 41.30,
-  "status": "delivered",
-  "customerId": 2
-},
-{
-  "id": 15,
-  "orderTimestamp": "2025-11-05T12:30:00",
-  "orderType": "dine-in",
-  "tableNumber": 4,
-  "deliveryAddress": null,
-  "tipAmount": 8.00,
-  "totalAmount": 62.40,
-  "status": "delivered",
-  "customerId": 1
-},
-{
-  "id": 16,
-  "orderTimestamp": "2025-11-05T18:45:00",
-  "orderType": "delivery",
-  "tableNumber": null,
-  "deliveryAddress": "147 Willow Road",
-  "tipAmount": 6.75,
-  "totalAmount": 53.25,
-  "status": "delivered",
-  "customerId": 1
-},
-{
-  "id": 17,
-  "orderTimestamp": "2025-11-05T13:00:00",
-  "orderType": "dine-in",
-  "tableNumber": 6,
-  "deliveryAddress": null,
-  "tipAmount": 4.75,
-  "totalAmount": 39.80,
-  "status": "delivered",
-  "customerId": 2
-},
-{
-  "id": 18,
-  "orderTimestamp": "2025-11-05T17:30:00",
-  "orderType": "delivery",
-  "tableNumber": null,
-  "deliveryAddress": "258 Spruce Boulevard",
-  "tipAmount": 5.25,
-  "totalAmount": 45.60,
-  "status": "delivered",
-  "customerId": 1
-},
-{
-  "id": 19,
-  "orderTimestamp": "2025-11-05T11:45:00",
-  "orderType": "dine-in",
-  "tableNumber": 9,
-  "deliveryAddress": null,
-  "tipAmount": 7.00,
-  "totalAmount": 58.90,
-  "status": "delivered",
-  "customerId": 2
-},
-{
-  "id": 20,
-  "orderTimestamp": "2025-11-05T19:15:00",
-  "orderType": "delivery",
-  "tableNumber": null,
-  "deliveryAddress": "369 Hickory Place",
-  "tipAmount": 4.00,
-  "totalAmount": 33.75,
-  "status": "delivered",
-  "customerId": 1
-},
-{
-  "id": 21,
-  "orderTimestamp": "2025-11-05T12:20:00",
-  "orderType": "dine-in",
-  "tableNumber": 11,
-  "deliveryAddress": null,
-  "tipAmount": 6.50,
-  "totalAmount": 49.20,
-  "status": "delivered",
-  "customerId": 2
-},
-{
-  "id": 22,
-  "orderTimestamp": "2025-11-05T18:00:00",
-  "orderType": "delivery",
-  "tableNumber": null,
-  "deliveryAddress": "741 Ash Street",
-  "tipAmount": 5.75,
-  "totalAmount": 47.85,
-  "status": "delivered",
-  "customerId": 1
-}
+      "id": 5,
+      "orderTimestamp": "2025-11-05T19:30:00",
+      "orderType": "dine-in",
+      "tableNumber": 8,
+      "deliveryAddress": null,
+      "tipAmount": 5.25,
+      "totalAmount": 42.5,
+      "status": "delivered",
+      "customerId": 1
+    },
+    {
+      "id": 6,
+      "orderTimestamp": "2025-11-05T11:20:00",
+      "orderType": "delivery",
+      "tableNumber": null,
+      "deliveryAddress": "456 Oak Avenue",
+      "tipAmount": 6,
+      "totalAmount": 48.9,
+      "status": "delivered",
+      "customerId": 2
+    },
+    {
+      "id": 7,
+      "orderTimestamp": "2025-11-05T13:45:00",
+      "orderType": "dine-in",
+      "tableNumber": 3,
+      "deliveryAddress": null,
+      "tipAmount": 4,
+      "totalAmount": 31.25,
+      "status": "delivered",
+      "customerId": 1
+    },
+    {
+      "id": 8,
+      "orderTimestamp": "2025-11-05T17:10:00",
+      "orderType": "delivery",
+      "tableNumber": null,
+      "deliveryAddress": "789 Maple Drive",
+      "tipAmount": 3.75,
+      "totalAmount": 29.6,
+      "status": "delivered",
+      "customerId": 2
+    },
+    {
+      "id": 9,
+      "orderTimestamp": "2025-11-05T12:00:00",
+      "orderType": "dine-in",
+      "tableNumber": 12,
+      "deliveryAddress": null,
+      "tipAmount": 7.5,
+      "totalAmount": 55.8,
+      "status": "delivered",
+      "customerId": 1
+    },
+    {
+      "id": 10,
+      "orderTimestamp": "2025-11-05T14:30:00",
+      "orderType": "delivery",
+      "tableNumber": null,
+      "deliveryAddress": "321 Pine Street",
+      "tipAmount": 5.5,
+      "totalAmount": 44.2,
+      "status": "delivered",
+      "customerId": 1
+    },
+    {
+      "id": 11,
+      "orderTimestamp": "2025-11-05T19:45:00",
+      "orderType": "dine-in",
+      "tableNumber": 7,
+      "deliveryAddress": null,
+      "tipAmount": 6.25,
+      "totalAmount": 51.75,
+      "status": "delivered",
+      "customerId": 2
+    },
+    {
+      "id": 12,
+      "orderTimestamp": "2025-11-05T11:15:00",
+      "orderType": "delivery",
+      "tableNumber": null,
+      "deliveryAddress": "654 Birch Lane",
+      "tipAmount": 4.25,
+      "totalAmount": 38.5,
+      "status": "delivered",
+      "customerId": 2
+    },
+    {
+      "id": 13,
+      "orderTimestamp": "2025-11-05T16:20:00",
+      "orderType": "dine-in",
+      "tableNumber": 10,
+      "deliveryAddress": null,
+      "tipAmount": 3.5,
+      "totalAmount": 27.9,
+      "status": "delivered",
+      "customerId": 1
+    },
+    {
+      "id": 14,
+      "orderTimestamp": "2025-11-05T20:00:00",
+      "orderType": "delivery",
+      "tableNumber": null,
+      "deliveryAddress": "987 Cedar Court",
+      "tipAmount": 5,
+      "totalAmount": 41.3,
+      "status": "delivered",
+      "customerId": 2
+    },
+    {
+      "id": 15,
+      "orderTimestamp": "2025-11-05T12:30:00",
+      "orderType": "dine-in",
+      "tableNumber": 4,
+      "deliveryAddress": null,
+      "tipAmount": 8,
+      "totalAmount": 62.4,
+      "status": "delivered",
+      "customerId": 1
+    },
+    {
+      "id": 16,
+      "orderTimestamp": "2025-11-05T18:45:00",
+      "orderType": "delivery",
+      "tableNumber": null,
+      "deliveryAddress": "147 Willow Road",
+      "tipAmount": 6.75,
+      "totalAmount": 53.25,
+      "status": "delivered",
+      "customerId": 1
+    },
+    {
+      "id": 17,
+      "orderTimestamp": "2025-11-05T13:00:00",
+      "orderType": "dine-in",
+      "tableNumber": 6,
+      "deliveryAddress": null,
+      "tipAmount": 4.75,
+      "totalAmount": 39.8,
+      "status": "delivered",
+      "customerId": 2
+    },
+    {
+      "id": 18,
+      "orderTimestamp": "2025-11-05T17:30:00",
+      "orderType": "delivery",
+      "tableNumber": null,
+      "deliveryAddress": "258 Spruce Boulevard",
+      "tipAmount": 5.25,
+      "totalAmount": 45.6,
+      "status": "delivered",
+      "customerId": 1
+    },
+    {
+      "id": 19,
+      "orderTimestamp": "2025-11-05T11:45:00",
+      "orderType": "dine-in",
+      "tableNumber": 9,
+      "deliveryAddress": null,
+      "tipAmount": 7,
+      "totalAmount": 58.9,
+      "status": "delivered",
+      "customerId": 2
+    },
+    {
+      "id": 20,
+      "orderTimestamp": "2025-11-05T19:15:00",
+      "orderType": "delivery",
+      "tableNumber": null,
+      "deliveryAddress": "369 Hickory Place",
+      "tipAmount": 4,
+      "totalAmount": 33.75,
+      "status": "delivered",
+      "customerId": 1
+    },
+    {
+      "id": 21,
+      "orderTimestamp": "2025-11-05T12:20:00",
+      "orderType": "dine-in",
+      "tableNumber": 11,
+      "deliveryAddress": null,
+      "tipAmount": 6.5,
+      "totalAmount": 49.2,
+      "status": "delivered",
+      "customerId": 2
+    },
+    {
+      "id": 22,
+      "orderTimestamp": "2025-11-05T18:00:00",
+      "orderType": "delivery",
+      "tableNumber": null,
+      "deliveryAddress": "741 Ash Street",
+      "tipAmount": 5.75,
+      "totalAmount": 47.85,
+      "status": "delivered",
+      "customerId": 1
+    }
   ],
   "employeesOrders": [
     {

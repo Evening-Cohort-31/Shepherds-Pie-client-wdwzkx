@@ -7,6 +7,7 @@ import BootstrapSampler from "../components/Bootstrap/BootstrapSampler.jsx";
 import { useCurrentEmployee } from "../context/CurrentEmployeeContext.js";
 import { OrderList } from "../components/orders/OrderList.jsx";
 import AdminRoute from "../routes/AdminRoute.jsx";
+import AccessDenied from "../components/accessdenied/AccessDenied.jsx";
 // import { MonthlySalesReport } from "../components/reports/MonthlySalesReport";
 // use employee email to login joe.giuseppe@perfectslice.com or any from database
 
@@ -23,6 +24,7 @@ export const ApplicationViews = () => {
       <Route path="/" element={<PizzaOrderBuilder />} />
       <Route path="/bootstrap" element={<BootstrapSampler />} />
       <Route path="/orderlist" element={<OrderList />} />
+      <Route path="/access-denied" element={<AccessDenied />} />
 
       {/* Route only accessible by admin employees */}
       <Route
