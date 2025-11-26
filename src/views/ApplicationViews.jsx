@@ -8,6 +8,8 @@ import { useCurrentEmployee } from "../context/CurrentEmployeeContext.js";
 import { OrderList } from "../components/orders/OrderList.jsx";
 import AdminRoute from "../routes/AdminRoute.jsx";
 import AccessDenied from "../components/accessdenied/AccessDenied.jsx";
+import { NavBar } from "../components/NavBar/NavBar.jsx";
+import { Outlet } from "react-router-dom";
 // import { MonthlySalesReport } from "../components/reports/MonthlySalesReport";
 // use employee email to login joe.giuseppe@perfectslice.com or any from database
 
@@ -21,6 +23,16 @@ export const ApplicationViews = () => {
 
   return (
     <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+          <NavBar />
+          <Outlet />
+          </>
+              }
+        >
+
       <Route path="/" element={<PizzaOrderBuilder />} />
       <Route path="/bootstrap" element={<BootstrapSampler />} />
       <Route path="/orderlist" element={<OrderList />} />
@@ -47,6 +59,7 @@ export const ApplicationViews = () => {
 
       {/* add other routes here as needed like the example below */}
       {/* <Route path="/reports" element={<MonthlySalesReport />} /> */}
+      </Route>
     </Routes>
   );
 };
