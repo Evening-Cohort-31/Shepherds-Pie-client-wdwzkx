@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from "react";
 import { CurrentEmployeeContext } from "./CurrentEmployeeContext.js";
-import { getEmployeeById } from "../services/employeeService.js";
+import { getEmployeeByEmployeeId } from "../services/employeeService.js";
 
 export const CurrentEmployeeProvider = ({ children }) => {
   const [currentEmployee, setCurrentEmployee] = useState(null);
@@ -14,7 +14,7 @@ export const CurrentEmployeeProvider = ({ children }) => {
     const localEmployee = localStorage.getItem("shepards_pies_employee");
     if (localEmployee) {
       const employeeObject = JSON.parse(localEmployee);
-      getEmployeeById(employeeObject.id)
+      getEmployeeByEmployeeId(employeeObject.id)
         .then((employee) => {
           setCurrentEmployee(employee);
         })

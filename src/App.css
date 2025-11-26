@@ -3,5 +3,17 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #16a34a
+  background-color: #16a34a;
+}
+
+.access-denied-title {
+  color: var(--shepherd-accent, #0f863d);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.access-denied-text {
+  color: var(--shepherd-dark-lighter);
+  font-size: 1.25rem;
+  opacity: 0.9;
 }

@@ -4,7 +4,7 @@ export const getAllEmployees = async () => {
     return fetchJson("/employees");
 };
 
-export const getEmployeeById = async (employeeId) => {
+export const getEmployeeByEmployeeId = async (employeeId) => {
     return fetchJson(`/employees/${employeeId}`);
 };
 

@@ -1,0 +1,17 @@
+.badge-jobtitle {
+  background-color: #0f863d; /* Shepherd’s Pies green */
+  color: white;
+  font-weight: 600;
+  padding: 0.5em 0.75em;
+  border-radius: 0.5rem;
+}
+
+.bg-shepherd-dark {
+  background-color: var(--shepherd-dark) !important;
+  color: #fff;
+}
+
+.bg-shepherd-dark-light {
+  background-color: var(--shepherd-dark-light) !important;
+  color: #fff;
+}
