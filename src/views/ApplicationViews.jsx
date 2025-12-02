@@ -10,6 +10,7 @@ import AdminRoute from "../routes/AdminRoute.jsx";
 import AccessDenied from "../components/accessdenied/AccessDenied.jsx";
 import { NavBar } from "../components/NavBar/NavBar.jsx";
 import { Outlet } from "react-router-dom";
+import { MonthlySalesReport } from "../components/Reports/MonthlySalesReport.jsx";
 // import { MonthlySalesReport } from "../components/reports/MonthlySalesReport";
 // use employee email to login joe.giuseppe@perfectslice.com or any from database
 
@@ -27,38 +28,38 @@ export const ApplicationViews = () => {
         path="/"
         element={
           <>
-          <NavBar />
-          <Outlet />
+            <NavBar />
+            <Outlet />
           </>
-              }
-        >
-
-      <Route path="/" element={<PizzaOrderBuilder />} />
-      <Route path="/bootstrap" element={<BootstrapSampler />} />
-      <Route path="/orderlist" element={<OrderList />} />
-      <Route path="/access-denied" element={<AccessDenied />} />
-
-      {/* Route only accessible by admin employees */}
-      <Route
-        path="/employees"
-        element={<AdminRoute currentEmployee={currentEmployee} />}
+        }
       >
-        <Route
-          index
-          element={<EmployeeList currentEmployee={currentEmployee} />}
-        />
-        <Route
-          path=":employeeId"
-          element={<EmployeeDetails currentEmployee={currentEmployee} />}
-        />
-        <Route
-          path=":employeeId/edit"
-          element={<EditEmployeeDetails currentEmployee={currentEmployee} />}
-        />
-      </Route>
+        <Route path="/" element={<PizzaOrderBuilder />} />
+        <Route path="/bootstrap" element={<BootstrapSampler />} />
+        <Route path="/orderlist" element={<OrderList />} />
+        <Route path="/salesreports" element={<MonthlySalesReport />} />
+        <Route path="/access-denied" element={<AccessDenied />} />
 
-      {/* add other routes here as needed like the example below */}
-      {/* <Route path="/reports" element={<MonthlySalesReport />} /> */}
+        {/* Route only accessible by admin employees */}
+        <Route
+          path="/employees"
+          element={<AdminRoute currentEmployee={currentEmployee} />}
+        >
+          <Route
+            index
+            element={<EmployeeList currentEmployee={currentEmployee} />}
+          />
+          <Route
+            path=":employeeId"
+            element={<EmployeeDetails currentEmployee={currentEmployee} />}
+          />
+          <Route
+            path=":employeeId/edit"
+            element={<EditEmployeeDetails currentEmployee={currentEmployee} />}
+          />
+        </Route>
+
+        {/* add other routes here as needed like the example below */}
+        {/* <Route path="/reports" element={<MonthlySalesReport />} /> */}
       </Route>
     </Routes>
   );
