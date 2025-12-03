@@ -1,0 +1,43 @@
+/* === Shepherd Footer Theme === */
+
+footer.shepherd-footer {
+  background-color: var(--shepherd-dark); /* deep brand charcoal */
+  border-top: 1px solid var(--shepherd-border);
+  color: var(--shepherd-white);
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+/* Copyright text */
+.shepherd-footer .footer-text {
+  color: var(--shepherd-text-light); /* bright light text */
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+/* Navigation links */
+.shepherd-footer .footer-link {
+  color: var(--shepherd-white-soft); /* soft white-gray */
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.shepherd-footer .footer-link:hover {
+  color: var(--shepherd-accent-light); /* brand green on hover */
+}
+
+/* Social icon buttons */
+.shepherd-footer .footer-icon-btn {
+  border-color: var(--shepherd-white-soft);
+  color: var(--shepherd-white-soft);
+}
+
+.shepherd-footer .footer-icon-btn:hover {
+  border-color: var(--shepherd-accent-light);
+  color: var(--shepherd-accent-light);
+}
+
+/* Slight spacing consistency improvement */
+.shepherd-footer .footer-links {
+  margin-bottom: 1rem;
+}

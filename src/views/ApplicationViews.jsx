@@ -11,6 +11,8 @@ import AccessDenied from "../components/accessdenied/AccessDenied.jsx";
 import { NavBar } from "../components/NavBar/NavBar.jsx";
 import { Outlet } from "react-router-dom";
 import { MonthlySalesReport } from "../components/Reports/MonthlySalesReport.jsx";
+import { Footer } from "../components/Footer/Footer.jsx";
+import "./AppLayout.css";
 // import { MonthlySalesReport } from "../components/reports/MonthlySalesReport";
 // use employee email to login joe.giuseppe@perfectslice.com or any from database
 
@@ -27,10 +29,13 @@ export const ApplicationViews = () => {
       <Route
         path="/"
         element={
-          <>
+          <div className="app-layout">
             <NavBar />
-            <Outlet />
-          </>
+            <main className="app-main">
+              <Outlet />
+            </main>
+            <Footer />
+          </div>
         }
       >
         <Route path="/" element={<PizzaOrderBuilder />} />

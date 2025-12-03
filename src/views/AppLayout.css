@@ -1,0 +1,9 @@
+.app-layout {
+  min-height: 100vh; /* Full height of viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex-grow: 1; /* Take up remaining space */
+}
