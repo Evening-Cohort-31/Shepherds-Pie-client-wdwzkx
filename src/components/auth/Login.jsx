@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Container, Form, Button, Card } from "react-bootstrap";
 import { getEmployeeByEmail } from "../../services/employeeService";
 import { useCurrentEmployee } from "../../context/CurrentEmployeeContext.js";
+import { PostItNote } from "../postitnote/PostItNote.jsx";
 
 export const EmployeeLogin = () => {
   const [email, setEmail] = useState("");
@@ -37,6 +38,9 @@ export const EmployeeLogin = () => {
       className="d-flex justify-content-center align-items-center"
       style={{ minHeight: "100vh" }}
     >
+      <div className="me-4">
+        <PostItNote />
+      </div>
       <Card style={{ width: "400px" }} className="shadow">
         <Card.Body className="p-4">
           <h1 className="text-center mb-2">🍕 Shepard's Pies 🍕</h1>
